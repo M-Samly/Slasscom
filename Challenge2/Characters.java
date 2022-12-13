@@ -12,4 +12,5 @@ public class Characters{
     public String getChara(){
         return chara;
     }
+    //s
 }
