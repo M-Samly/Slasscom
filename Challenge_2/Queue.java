@@ -1,8 +1,8 @@
 public class Queue {
 
-    int SIZE = 10;
-    char items[] = new char[SIZE];
-    int front, rear;
+    private int SIZE = 10;
+    private char items[] = new char[SIZE];
+    private int front, rear;
 
     public Queue(int SIZE) {
         front = -1;
@@ -10,6 +10,7 @@ public class Queue {
     }
 
     public boolean isFull() {
+        //chechikg the queue is full or not
         if (front == 0 && rear == SIZE - 1) {
             return true;
         }
@@ -17,6 +18,7 @@ public class Queue {
     }
 
     public boolean isEmpty() {
+        //chechikg the queue is empty or not 
         if (front == -1) {
             return true;
         } else {
@@ -25,6 +27,7 @@ public class Queue {
     }
 
     public void enQueue(char element) {
+        //add to to Queue
         if (isFull()) {
             System.out.println("Queue is full");
         } else {
@@ -37,6 +40,7 @@ public class Queue {
     }
 
     public char deQueue() {
+        //remove value from queue
         char element;
         if (isEmpty()) {
             System.out.println("Queue is empty");
@@ -66,28 +70,27 @@ public class Queue {
         }
     }
 
+    //main method
     public static void main(String[] args) {
-             String in =args[0];
-             
-        boolean ans = chkLogic(in);
-        System.out.println(ans);
-
-
+        String in =args[0];             //Commandline argivment
+        boolean ans = answer(in);       //pass the commandline aegivment value into answer method
+        System.out.println(ans);        //final boolean value
     }
 
-    static boolean chkLogic(String input) {
-        Queue q = new Queue(10);
+    //boolean method call
+    static boolean answer(String input) {
+        Queue q = new Queue(10);                                                                //Call the Queue method
        for (int i = 0; i < input.length(); i++) {
-            if (input.charAt(i) == '(' || input.charAt(i) == '{' || input.charAt(i) == '[') {
-                q.enQueue(input.charAt(i));
+            if (input.charAt(i) == '(' || input.charAt(i) == '{' || input.charAt(i) == '[') {   //checking the conditions
+                q.enQueue(input.charAt(i));                                                     //add to the queue structure
             } else if (input.charAt(i) == ')' && !q.isEmpty()) {
-                 q.deQueue();
+                 q.deQueue();                                                                   //remove from the queue structure 
             } else if (input.charAt(i) == '}' && !q.isEmpty()) {
-                 q.deQueue();
+                 q.deQueue();                                                                   //remove from the queue structure
             } else if (input.charAt(i) == ']' && !q.isEmpty()) {
-                 q.deQueue();
+                 q.deQueue();                                                                   //remove from the queue structure
             } else {              
-                return false;
+                return false;                                                                   //return 
             }
         }
        return q.isEmpty();
