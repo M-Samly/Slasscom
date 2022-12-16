@@ -1,3 +1,4 @@
+import java.util.*;
 public class Queue {
 
     private int SIZE = 10;
@@ -72,7 +73,12 @@ public class Queue {
 
     //main method
     public static void main(String[] args) {
-        String in =args[0];             //Commandline argivment
+        String in = args[0];             //Commandline argivment
+        /*
+        //another user input method
+        Scanner sc = new Scanner(System.in);     //Get the value from user using scanner class
+        String in = sc.nextLine();
+        */
         boolean ans = answer(in);       //pass the commandline aegivment value into answer method
         System.out.println(ans);        //final boolean value
     }
