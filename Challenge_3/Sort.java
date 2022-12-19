@@ -24,6 +24,7 @@ public class Sort{
 
     System.out.println("Middel valeue : "+median(array));
         System.out.println("Max valeue : "+max(array));
+        System.out.println("Mode valeue : "+mode(array));
         prime(array);
   }
 
@@ -47,6 +48,21 @@ public class Sort{
                 mval = array[i];
             }
         }
+        return mval;
+    }
+
+    //mode
+    public static int mode(int[] array){
+        int mval = 0;
+        int count = 0;
+        for(int i=0;i<array.length;i++){
+            if(array[i] != mval){
+                mval = array[i];
+            }else if(array[i] == mval) {
+                count++;
+            }
+        }
+        //System.out.println(count);        
         return mval;
     }
 
