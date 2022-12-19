@@ -24,8 +24,9 @@ public class Sort{
 
     System.out.println("Middel valeue : "+median(array));
         System.out.println("Max valeue : "+max(array));
+        prime(array);
   }
-  
+
     //middle value of array
     public static int median(int[] array){
         int val = array.length / 2;
@@ -47,5 +48,29 @@ public class Sort{
             }
         }
         return mval;
+    }
+
+    //prime numbers
+    public static void prime(int[] array){
+        int cnt = 0;
+    int i = 0;
+    int flag = 0;
+
+
+    for (cnt = 0; cnt < array.length; cnt++) {
+      flag = 0;
+      for (i = 2; i < array[cnt] / 2; i++) {
+        if (array[cnt] % i == 0) {
+          flag = 1;
+          break;
+        }
+      }
+      if(flag == 0){
+        System.out.println(array[cnt] +" - Prime");
+      }else{        
+        System.out.println(array[cnt] +" - Not Prime");
+      }
+    }
+    System.out.println();
     }
 }
