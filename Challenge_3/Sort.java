@@ -33,52 +33,45 @@ public class Sort {
 
   // middle value of array
   public static int median(int[] array) {
-    int val = array.length / 2;
-    int middle = 0;
+    int val = array.length / 2;                   //get the lenth of array and devided by 2
+    int middle = 0;                               //intial middle value as zero
     for (int i = 0; i < array.length; i++) {
-      if (i == val) {
-        middle = array[i];
+      if (i == val) {                             //check if devided value equal to array number
+        middle = array[i];                        //asing a new value as a middle value
       }
     }
-    return middle;
+    return middle;                                //return middle value
   }
 
   // maximum value of array
   public static int max(int[] array) {
-    int mval = 0;
+    int mval = 0;                                 //intial maximam value as zero
     for (int i = 0; i < array.length; i++) {
-      if (array[i] > mval) {
-        mval = array[i];
+      if (array[i] > mval) {                      //checking maximum value
+        mval = array[i];                          //asing a new value as a miximum value
       }
     }
-    return mval;
+    return mval;                                  //return maximum value
   }
 
   // mode funtion
   public static void mode(int[] array) {
     int count = 0;
-    int temp[] = new int[array.length];
-    // traverse original array
-    for (int i = 0; i < array.length; i++) {
-      // current element
+    int temp[] = new int[array.length];               // traverse original array  
+    for (int i = 0; i < array.length; i++) {          // current element
       int element = array[i];
-      // if already exist then don't check
-      if (element == temp[count]) {
+      if (element == temp[count]) {                   // if already exist then don't check
         continue;
       }
-      // check occurrence of element
-      for (int j = i + 1; j < array.length; j++) {
+      for (int j = i + 1; j < array.length; j++) {    // check occurrence of element
         if (array[j] == element) {
           temp[count++] = element;
-          // found, therefore break
-          break;
+          break;                                      // found, therefore break
         }
       }
     }
-    // display total repeated elements
-    System.out.println("Total Repeated elements: " + count);
-    // display repeated elements
-    System.out.println("Repeated elements are: ");
+    System.out.println("Total Repeated elements: " + count);  // display total repeated elements
+    System.out.println("Repeated elements are: ");          // display repeated elements
     for (int i = 0; i < count; i++) {
       System.out.print(temp[i] + " ");
     }
