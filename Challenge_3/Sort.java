@@ -20,7 +20,7 @@ public class Sort {
   public static void main(String args[]) {
     // int[] array = { 47, 84, 75, 21, 14, 14, 79 }; //Array values
     Scanner sc = new Scanner(System.in);
-    System.out.println("Enter Value ");F
+    System.out.println("Enter Value ");
     int array[] = new int[7];
     for (int i = 0; i < 7; i++) {
       array[i] = sc.nextInt();
