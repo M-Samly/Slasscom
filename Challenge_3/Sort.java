@@ -6,9 +6,9 @@ public class Sort {
   // insertion sort
   public void Sort(int array[]) {
     int size = array.length;                                    // Get the array list
-    for (int step = 1; step < size; step++) {
-      int key = array[step];
-      int j = step - 1;
+    for (int i = 1; i < size; i++) {
+      int key = array[i];
+      int j = i - 1;
       while (j >= 0 && key < array[j]) {
         array[j + 1] = array[j];
         --j;
@@ -18,13 +18,13 @@ public class Sort {
   }
 
   public static void main(String args[]) {
-    // int[] array = { 47, 84, 75, 21, 14, 14, 79 };            //Array values
-    Scanner sc = new Scanner(System.in);                        //Create scanner object
+    int[] array = { 47, 84, 75, 21, 14, 14, 79 };            //Array values
+    /*Scanner sc = new Scanner(System.in);                        //Create scanner object
     System.out.println("Enter Value ");
     int array[] = new int[7];
     for (int i = 0; i < 7; i++) {
       array[i] = sc.nextInt();                                  //get the input
-    }
+    }*/
     Sort is = new Sort();                                       //call the intation sort
     is.Sort(array);                                             //get the order
     System.out.println("Sorted Array in Ascending Order: ");  //Display the array order
