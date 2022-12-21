@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Sort {
 
@@ -17,7 +18,13 @@ public class Sort {
   }
 
   public static void main(String args[]) {
-    int[] array = { 47, 84, 75, 21, 14, 14, 79 };
+    // int[] array = { 47, 84, 75, 21, 14, 14, 79 }; //Array values
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter Value ");F
+    int array[] = new int[7];
+    for (int i = 0; i < 7; i++) {
+      array[i] = sc.nextInt();
+    }
     Sort is = new Sort();
     is.Sort(array);
     System.out.println("Sorted Array in Ascending Order: ");
@@ -33,45 +40,45 @@ public class Sort {
 
   // middle value of array
   public static int median(int[] array) {
-    int val = array.length / 2;                   //get the lenth of array and devided by 2
-    int middle = 0;                               //intial middle value as zero
+    int val = array.length / 2; // get the lenth of array and devided by 2
+    int middle = 0; // intial middle value as zero
     for (int i = 0; i < array.length; i++) {
-      if (i == val) {                             //check if devided value equal to array number
-        middle = array[i];                        //asing a new value as a middle value
+      if (i == val) { // check if devided value equal to array number
+        middle = array[i]; // asing a new value as a middle value
       }
     }
-    return middle;                                //return middle value
+    return middle; // return middle value
   }
 
   // maximum value of array
   public static int max(int[] array) {
-    int mval = 0;                                 //intial maximam value as zero
+    int mval = 0; // intial maximam value as zero
     for (int i = 0; i < array.length; i++) {
-      if (array[i] > mval) {                      //checking maximum value
-        mval = array[i];                          //asing a new value as a miximum value
+      if (array[i] > mval) { // checking maximum value
+        mval = array[i]; // asing a new value as a miximum value
       }
     }
-    return mval;                                  //return maximum value
+    return mval; // return maximum value
   }
 
   // mode funtion
   public static void mode(int[] array) {
     int count = 0;
-    int temp[] = new int[array.length];               // traverse original array  
-    for (int i = 0; i < array.length; i++) {          // current element
+    int temp[] = new int[array.length]; // traverse original array
+    for (int i = 0; i < array.length; i++) { // current element
       int element = array[i];
-      if (element == temp[count]) {                   // if already exist then don't check
+      if (element == temp[count]) { // if already exist then don't check
         continue;
       }
-      for (int j = i + 1; j < array.length; j++) {    // check occurrence of element
+      for (int j = i + 1; j < array.length; j++) { // check occurrence of element
         if (array[j] == element) {
           temp[count++] = element;
-          break;                                      // found, therefore break
+          break; // found, therefore break
         }
       }
     }
-    System.out.println("Total Repeated elements: " + count);  // display total repeated elements
-    System.out.println("Repeated elements are: ");          // display repeated elements
+    System.out.println("Total Repeated elements: " + count); // display total repeated elements
+    System.out.print("Repeated elements are: "); // display repeated elements
     for (int i = 0; i < count; i++) {
       System.out.print(temp[i] + " ");
     }
