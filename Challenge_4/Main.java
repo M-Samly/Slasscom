@@ -156,7 +156,7 @@ public class Main {
 
     }
 
-    static double calAvg(int totalMark) {
+    static double calAvg(double totalMark) {
 
         double avg = totalMark / 3;
 
