@@ -1,5 +1,5 @@
 public class Science {
-    
+
     private int Attendance;
     private int Project;
     private int Midterm;
@@ -19,5 +19,4 @@ public class Science {
         return total;
     }
 
-    
 }

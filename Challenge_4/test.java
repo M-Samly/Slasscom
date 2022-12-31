@@ -76,10 +76,10 @@ public class test {
 
                 line = br.readLine();
                 details1 = line.split(split);
-                for(int y=0; y<10; y++){
+                for (int y = 0; y < 10; y++) {
                     details[y] = details1[y].trim();
                 }
-                
+
             }
 
             br.close();

@@ -31,7 +31,7 @@ public class Main {
                 subArray_M[0].trim());
         Maths m1 = new Maths(Integer.parseInt(subArray_M[1].trim()),
                 Integer.parseInt(subArray_M[2].trim()),
-                Integer.parseInt(subArray_M[3].trim()), 
+                Integer.parseInt(subArray_M[3].trim()),
                 Integer.parseInt(subArray_M[4].trim()),
                 Integer.parseInt(subArray_M[5].trim()),
                 Integer.parseInt(subArray_M[6].trim()),
