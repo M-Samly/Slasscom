@@ -38,9 +38,9 @@ public class Main {
                 Integer.parseInt(subArray_M[7].trim()),
                 Integer.parseInt(subArray_M[8].trim()));
 
-        System.out.println(en1.totalMark());
-        System.out.println(sc1.totalMark());
-        System.out.println(m1.totalMark());
+        System.out.println("English : " + en1.totalMark());
+        System.out.println("Science : " + sc1.totalMark());
+        System.out.println("Maths : " + m1.totalMark());
 
     }
 

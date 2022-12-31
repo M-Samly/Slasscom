@@ -12,27 +12,27 @@ public class test {
 
         ReadData("test.txt", strArray, ",");
 
-        for (int i = 0; i < 2; i++) {
+        /*for (int i = 0; i < 2; i++) {
             System.out.println(strArray[i]);
-        }
+        }*/
 
         ReadDataSub_E("test.txt", subArray_E, " ");
 
-        for (int i = 0; i < 10; i++) {
+       /* for (int i = 0; i < 10; i++) {
             System.out.println(subArray_E[i]);
-        }
+        }*/
 
         ReadDataSub_S("test.txt", subArray_S, " ");
 
-        for (int i = 0; i < 10; i++) {
+        /*for (int i = 0; i < 10; i++) {
             System.out.println(subArray_S[i]);
-        }
+        }*/
 
         ReadDataSub_M("test.txt", subArray_M, " ");
 
-        for (int i = 0; i < 10; i++) {
+       /*  for (int i = 0; i < 10; i++) {
             System.out.println(subArray_M[i]);
-        }
+        }*/
 
     }
 
@@ -143,7 +143,7 @@ public class test {
         } catch (IOException e1) {
             System.out.println("Error in File reading!!!");
         } catch (Exception e2) {
-            System.out.println("Error in processing!!!");
+            //System.out.println("Error in processing!!!");
         }
 
     }
