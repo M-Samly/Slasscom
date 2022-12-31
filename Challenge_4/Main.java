@@ -6,7 +6,6 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
-
         String[] strArray = new String[256];
         String[] subArray_E = new String[256];
         String[] subArray_S = new String[256];
