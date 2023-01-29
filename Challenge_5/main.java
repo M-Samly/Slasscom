@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class main {
-    private double perDayPay;
-    private int noOfDay;
     private double basicSal;
     private double allowances;
     private double epf;
