@@ -46,16 +46,4 @@ public class main {
         System.out.println(finalSal);
     }
 
-    public main(double perDayPay, int noOfDay) {
-        this.perDayPay = perDayPay;
-        this.noOfDay = noOfDay;
-    }
-
-    public double getFinalSal() {
-        return finalSal;
-    }
-
-    public double getempContribution() {
-        return employerContribution;
-    }
 }
