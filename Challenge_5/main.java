@@ -41,9 +41,9 @@ public class main {
         thread3.join();
 
         finalSal = basicSal + allowances + epf; // main thread cal final Salary
-        System.out.println(employerContribution);
-        System.out.println(epf);
-        System.out.println(finalSal);
+        System.out.println("Employer's Contribution: " + employerContribution);
+        System.out.println("EPF: " + epf);
+        System.out.println("Final Salary: " + finalSal);
     }
 
 }
